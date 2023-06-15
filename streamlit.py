@@ -4,8 +4,10 @@ import pandas as pd
 import numpy as np
 
 #Loading up the Regression model we created
-model = CatBoostClassifier()
-model.load_model('catboost_model.json')
+
+# Load the model from the JSON file
+with open('catboost_model.json', 'rb') as file:
+    model = pickle.load(file)
 
 #Caching the model for faster loading
 @st.cache
