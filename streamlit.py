@@ -29,7 +29,10 @@ thirtyDayOrderCount = st.number_input('30 Day Order Count:', min_value=0.1, max_
 ninetyDayOrderCount = st.number_input('90 Day Order Count:', min_value=0.1, max_value=100.0, value=1.0)
 oneEightyDayOrderCount = st.number_input('180 Day Order Count:', min_value=0.1, max_value=100.0, value=1.0)
 ThreeSixFiveDayOrderCount = st.number_input('365 Day Order Count:', min_value=0.1, max_value=100.0, value=1.0)
-countOfDogFood = st.number_input('Total Order Counnt:', min_value=0.1, max_value=100.0, value=1.0)
+countOfDogFood = st.number_input('Count of Dog Food Orders:', min_value=0.1, max_value=100.0, value=1.0)
+countOfCatFood = st.number_input('Count of Cat Food Orders:', min_value=0.1, max_value=100.0, value=1.0)
+daysSinceLastOrder = st.number_input('Days since last order:', min_value=0.1, max_value=100.0, value=1.0)
+groupLoyaltyCustomer = st.selectbox('Group Loyalty Customer:', [1,0])
 
 
 if st.button('Predict'):
