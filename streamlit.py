@@ -2,6 +2,7 @@ from catboost import CatBoostClassifier, Pool
 import streamlit as st
 import pandas as pd
 import numpy as np
+import pickle
 
 #Loading up the Regression model we created
 
