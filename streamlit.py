@@ -30,6 +30,5 @@ countOfDogFood = st.number_input('Total Order Counnt:', min_value=0.1, max_value
 
 
 if st.button('Predict'):
-    price = predict(state, totalOrderCount, 30DayOrderCount, 90DayOrderCount, 180DayOrderCount, 365DayOrderCount, countOfDogFood, countOfCatFood, daysSinceLastOrder, groupLoyaltyCustomer, countOfItemID, minBagSize, maxBagSize, avgBagSize, mostFrequentCategoryValue, mostFrequentSubCategoryValue,
-           daysBetweenOrderAVG, daysBetweenOrderSTD, averageRevenue, latestTransactionRevenue)
+    price = predict(state, totalOrderCount, thirtyDayOrderCount, ninetyDayOrderCount, oneEightyDayOrderCount, ThreeSixFiveDayOrderCount, countOfDogFood, countOfCatFood, daysSinceLastOrder, groupLoyaltyCustomer, countOfItemID, minBagSize, maxBagSize, avgBagSize, mostFrequentCategoryValue, mostFrequentSubCategoryValue, daysBetweenOrderAVG, daysBetweenOrderSTD, averageRevenue, latestTransactionRevenue)
     st.success(f'The predicted price of the diamond is ${price[0]:.2f} USD')
