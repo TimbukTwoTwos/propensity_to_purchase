@@ -36,7 +36,13 @@ groupLoyaltyCustomer = st.selectbox('Group Loyalty Customer:', [1,0])
 countOfItemID = st.number_input('Count of Item ID:', min_value=0.1, max_value=100.0, value=1.0)
 minBagSize = st.number_input('Min bag size:', min_value=0.1, max_value=100.0, value=1.0)
 maxBagSize = st.number_input('Max bag size:', min_value=0.1, max_value=100.0, value=1.0)
-mostFrequentCategoryValue = st.text_input("Enter some text")
+mostFrequentCategoryValue = st.text_input('Most frequent category value')
+mostFrequentSubCategoryValue = st.text_input('Most frequent sub-category value')
+daysBetweenOrderAVG = st.number_input('Days between order AVG:', min_value=0.1, max_value=100.0, value=1.0)
+daysBetweenOrderSTD = st.number_input('Days between order STD:', min_value=0.1, max_value=100.0, value=1.0)
+averageRevenue = st.number_input('Average Revenue:', min_value=0.1, max_value=100.0, value=1.0)
+latestTransactionRevenue = st.number_input('Latest transaction revenue:', min_value=0.1, max_value=100.0, value=1.0)
+
 
 
 if st.button('Predict'):
