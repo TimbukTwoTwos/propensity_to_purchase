@@ -36,7 +36,7 @@ groupLoyaltyCustomer = st.selectbox('Group Loyalty Customer:', [1,0])
 countOfItemID = st.number_input('Count of Item ID:', min_value=0.1, max_value=100.0, value=1.0)
 minBagSize = st.number_input('Min bag size:', min_value=0.1, max_value=100.0, value=1.0)
 maxBagSize = st.number_input('Max bag size:', min_value=0.1, max_value=100.0, value=1.0)
-mostFrequentCategoryValue = st.text_input()
+mostFrequentCategoryValue = st.text_input("Enter some text")
 
 
 if st.button('Predict'):
