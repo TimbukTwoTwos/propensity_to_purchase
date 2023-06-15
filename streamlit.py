@@ -11,8 +11,7 @@ model.load_model('catboost_model.json')
 @st.cache
 
 # Define the prediction function
-def predict(state, totalOrderCount, 30DayOrderCount, 90DayOrderCount, 180DayOrderCount, 365DayOrderCount, countOfDogFood, countOfCatFood, daysSinceLastOrder, groupLoyaltyCustomer, countOfItemID, minBagSize, maxBagSize, avgBagSize, mostFrequentCategoryValue, mostFrequentSubCategoryValue,
-           daysBetweenOrderAVG, daysBetweenOrderSTD, averageRevenue, latestTransactionRevenue):
+def predict(state, totalOrderCount, 30DayOrderCount, 90DayOrderCount, 180DayOrderCount, 365DayOrderCount, countOfDogFood, countOfCatFood, daysSinceLastOrder, groupLoyaltyCustomer, countOfItemID, minBagSize, maxBagSize, avgBagSize, mostFrequentCategoryValue, mostFrequentSubCategoryValue, daysBetweenOrderAVG, daysBetweenOrderSTD, averageRevenue, latestTransactionRevenue):
     prediction = model.predict(pd.DataFrame([[state, totalOrderCount, 30DayOrderCount, 90DayOrderCount, 180DayOrderCount, 365DayOrderCount, countOfDogFood, countOfCatFood, daysSinceLastOrder, groupLoyaltyCustomer, countOfItemID, minBagSize, maxBagSize, avgBagSize, mostFrequentCategoryValue, mostFrequentSubCategoryValue,
            daysBetweenOrderAVG, daysBetweenOrderSTD, averageRevenue, latestTransactionRevenue]], columns=['State', 'totalOrderCount', '30DayOrderCount', '90DayOrderCount', '180DayOrderCount', '365DayOrderCount', 'countOfDogFood', 'countOfCatFood', 'daysSinceLastOrder', 'groupLoyaltyCustomer', 'countOfItemID', 'minBagSize', 'maxBagSize', 'avgBagSize', 'mostFrequentCategoryValue', 'mostFrequentSubCategoryValue',
            'daysBetweenOrderAVG', 'daysBetweenOrderSTD', 'averageRevenue', 'latestTransactionRevenue']))
